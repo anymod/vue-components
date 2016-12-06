@@ -1,0 +1,100 @@
+#carousel-id {
+
+  // jframe-specific
+  .carousel-inner > .item > a > img, .carousel-inner > .item > img, .img-responsive {
+    margin: 0 auto;
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  // glyphicons
+  @icon-font-path: "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/fonts/";
+  @icon-font-name: "glyphicons-halflings-regular";
+  @icon-font-svg-id: "glyphicons_halflingsregular";
+  // Import the fonts
+  @font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url('@{icon-font-path}@{icon-font-name}.eot');
+    src: url('@{icon-font-path}@{icon-font-name}.eot?#iefix') format('embedded-opentype'),
+         url('@{icon-font-path}@{icon-font-name}.woff2') format('woff2'),
+         url('@{icon-font-path}@{icon-font-name}.woff') format('woff'),
+         url('@{icon-font-path}@{icon-font-name}.ttf') format('truetype'),
+         url('@{icon-font-path}@{icon-font-name}.svg#@{icon-font-svg-id}') format('svg');
+  }
+  // Catchall baseclass
+  .glyphicon {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .glyphicon-chevron-left:before { content: "\e079"; }
+  .glyphicon-chevron-right:before { content: "\e080"; }
+
+  // bootstrap.css
+  * { box-sizing: border-box; }
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  @media screen and (min-width: 768px) {
+    .carousel-indicators { bottom: 20px; }
+  }
+  ol, ul {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  a { text-decoration: none; }
+  .carousel-inner>.active, .carousel-inner>.next, .carousel-inner>.prev {
+    display: block;
+  }
+
+  // scaffolding.less
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+  background-color: #fff;
+
+  // vendor-prefixes.less
+  :after, :before { box-sizing: border-box; }
+  @media not all, (-webkit-transform-3d) {
+    .carousel-inner > .item {
+      -webkit-transition: -webkit-transform .6s ease-in-out;
+      -o-transition: -o-transform .6s ease-in-out;
+      transition: transform .6s ease-in-out;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      -webkit-perspective: 1000px;
+      perspective: 1000px;
+    }
+  }
+
+  //== Carousel
+  //
+  //##
+
+  @carousel-text-shadow:                        0 1px 2px rgba(0,0,0,.6);
+  @carousel-control-color:                      #fff;
+  @carousel-control-width:                      15%;
+  @carousel-control-opacity:                    .5;
+  @carousel-control-font-size:                  20px;
+  @carousel-indicator-active-bg:                #fff;
+  @carousel-indicator-border-color:             #fff;
+  @carousel-caption-color:                      #fff;
+
+  // Small screen / tablet
+  //** Deprecated `@screen-sm` as of v3.0.1
+  @screen-sm:                  768px;
+  @screen-sm-min:              @screen-sm;
+
+  @import '../bower_components/bootstrap/less/mixins/opacity.less';
+  @import '../bower_components/bootstrap/less/mixins/gradients.less';
+  @import '../bower_components/bootstrap/less/mixins/vendor-prefixes.less';
+
+  @import '../bower_components/bootstrap/less/carousel.less';
+
+}
