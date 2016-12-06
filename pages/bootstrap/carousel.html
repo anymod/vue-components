@@ -2,12 +2,13 @@ bootstrap/carousel
 <hr>
 
 <!-- dependencies -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
-<script src="/vendor/vue.js"></script>
-<script src="/vendor/vue-strap.js"></script>
+<!-- TODO move to less-based compilation with gulp -->
+<link rel="stylesheet" href="/css/bootstrap/carousel.css"/>
+<script src="/js/vue.js"></script>
+<script src="/js/vue-strap.js"></script>
 <!-- dependencies -->
 
-<div id="app-001">
+<div id="jId">
   <div>
     <carousel>
       <slider v-for="slide in slides">
@@ -23,7 +24,7 @@ bootstrap/carousel
 
 <script>
   new Vue({
-    el: '#app-001',
+    el: '#jId',
     data: {
       slides: [
         {

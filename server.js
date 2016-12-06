@@ -22,7 +22,7 @@ app.get('/bootstrap/:component', (req, res, next) => {
   }
 })
 
-app.use(serveStatic(path.join(__dirname, '')))
+app.use(serveStatic(path.join(__dirname, 'dependencies')))
 
 app.listen(process.env.PORT, () => {
   console.log('Example app listening on port ' + process.env.PORT)
