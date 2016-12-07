@@ -12,13 +12,15 @@
   </alert>
 </div>
 
+<a href="#" onclick="showAlert()">alert</a>
+
 <script>
-  new Vue({
+  var obj = {
     el: '#jId',
     data: {
       showRight: true,
       placement: 'top',
-      type: 'info',
+      type: 'success',
       duration: 0,
       width: '400px',
       heading: 'Well done!',
@@ -27,5 +29,10 @@
     components: {
       alert: VueStrap.alert
     }
-  })
+  }
+  new Vue(obj)
+
+  function showAlert () {
+    console.log('show')
+  }
 </script>
