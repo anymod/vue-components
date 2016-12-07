@@ -1,25 +1,19 @@
-bootstrap/carousel
-<hr>
-
 <!-- dependencies -->
-<!-- TODO move to less-based compilation with gulp -->
 <link rel="stylesheet" href="/css/bootstrap/carousel.css"/>
 <script src="/js/vue.js"></script>
 <script src="/js/vue-strap.js"></script>
 <!-- dependencies -->
 
 <div id="jId">
-  <div>
-    <carousel>
-      <slider v-for="slide in slides">
-        <img v-bind:src="slide.image"/>
-        <div class="carousel-caption">
-          <h3>{{ slide.title }}</h3>
-          <p>{{ slide.caption }}</p>
-        </div>
-      </slider>
-    </carousel>
-  </div>
+  <carousel>
+    <slider v-for="slide in slides">
+      <img v-bind:src="slide.image"/>
+      <div class="carousel-caption">
+        <h3>{{ slide.title }}</h3>
+        <p>{{ slide.caption }}</p>
+      </div>
+    </slider>
+  </carousel>
 </div>
 
 <script>
@@ -30,12 +24,12 @@ bootstrap/carousel
         {
           image: 'https://images.unsplash.com/uploads/1412026213666b9983de0/767f037f?dpr=1&auto=format&crop=entropy&fit=crop&w=1200&h=400&q=80&cs=tinysrgb',
           caption: 'Horsing around',
-          title: 'Horsies'
+          title: 'A slide with a horse'
         },
         {
-          image: 'https://images.unsplash.com/photo-1472647077244-23bed45e50d9?dpr=1&auto=format&crop=entropy&fit=crop&w=1200&h=400&q=80&cs=tinysrgb',
+          image: 'https://images.unsplash.com/photo-1472647077244-23bed45e50d9?dpr=1&auto=format&crop=north&fit=crop&w=1200&h=400&q=80&cs=tinysrgb',
           caption: 'Better boater',
-          title: 'Water things'
+          title: 'Reflecting on the water'
         },
         {
           image: 'https://images.unsplash.com/photo-1471110338536-858caa3dbe45?dpr=1&auto=format&crop=entropy&fit=crop&w=1200&h=400&q=80&cs=tinysrgb',

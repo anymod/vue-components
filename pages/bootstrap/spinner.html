@@ -1,0 +1,33 @@
+<!-- dependencies -->
+<!-- <link rel="stylesheet" href="/css/bootstrap/spinner.css"/> -->
+<link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.css"/>
+<script src="/js/vue.js"></script>
+<script src="/js/vue-strap.js"></script>
+<!-- dependencies -->
+
+<div id="jId">
+  <spinner fixed global
+    ref="spinner"
+    v-model="spinner"
+    :size="size"
+    :text="text">
+  </spinner>
+</div>
+
+<script>
+
+</script>
+
+<script>
+  new Vue({
+    el: '#jId',
+    data: {
+      size: 'xl',
+      text: 'I will close in 2 seconds',
+      spinner: false
+    },
+    components: {
+      spinner: VueStrap.spinner
+    }
+  })
+</script>

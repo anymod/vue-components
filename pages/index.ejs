@@ -6,7 +6,39 @@
   </head>
   <body>
 
-    <%- include(path); %>
+    <!-- breadcrumb -->
+    <% if (!!data.folders) { %>
+      home
+    <% } else if (!!data.folder) { %>
+      <a href="/">home</a> /
+      <% if (!!data.path) { %>
+        <a href="/c/<%= data.folder %>"><%= data.folder %></a> / <%= data.component %>
+      <% } else { %>
+        <%= data.folder %>
+      <% } %>
+    <% } %>
+    <hr>
+    <!-- /breadcrumb -->
+
+    <% if (!!data.folders) { %>
+      <ul>
+        <% for(var i = 0; i < data.folders.length; i++) { %>
+           <li><a href="/c/<%= data.folders[i] %>"><%= data.folders[i] %></a></li>
+        <% } %>
+      </ul>
+    <% } %>
+
+    <% if (!!data.paths) { %>
+      <ul>
+        <% for(var i = 0; i < data.paths.length; i++) { %>
+           <li><a href="/c/<%= data.folder %>/<%= data.paths[i] %>"><%= data.paths[i] %></a></li>
+        <% } %>
+      </ul>
+    <% } %>
+
+    <% if (!!data.path) { %>
+      <%- include(data.path); %>
+    <% } %>
 
   </body>
 </html>

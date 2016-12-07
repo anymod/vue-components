@@ -1,0 +1,17 @@
+<!-- dependencies -->
+<link rel="stylesheet" href="/css/basics/html.css"/>
+<script src="/js/vue.js"></script>
+<!-- dependencies -->
+
+<div id="jId">
+  <span v-html="rawHtml"></span>
+</div>
+
+<script>
+  new Vue({
+    el: '#jId',
+    data: {
+      rawHtml: '<h1>Title</h1><p>Paragraph</p>'
+    }
+  })
+</script>

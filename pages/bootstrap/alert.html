@@ -1,0 +1,31 @@
+<!-- dependencies -->
+<link rel="stylesheet" href="/css/bootstrap/alert.css"/>
+<!-- <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.css"/> -->
+<script src="/js/vue.js"></script>
+<script src="/js/vue-strap.js"></script>
+<!-- dependencies -->
+
+<div id="jId">
+  <alert :placement="placement" :duration="duration" :type="type" :width="width" dismissable>
+    <strong>{{ heading }}</strong>
+    <p>{{ message }}</p>
+  </alert>
+</div>
+
+<script>
+  new Vue({
+    el: '#jId',
+    data: {
+      showRight: true,
+      placement: 'top',
+      type: 'info',
+      duration: 0,
+      width: '400px',
+      heading: 'Well done!',
+      message: 'You successfully read this important alert message.'
+    },
+    components: {
+      alert: VueStrap.alert
+    }
+  })
+</script>
