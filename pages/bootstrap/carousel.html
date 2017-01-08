@@ -7,7 +7,7 @@
 <div id="jId">
   <carousel>
     <slider v-for="slide in slides">
-      <img v-bind:src="slide.image"/>
+      <img :src="slide.image"/>
       <div class="carousel-caption">
         <h3 v-text="slide.title"></h3>
         <p v-text="slide.caption"></p>
