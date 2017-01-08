@@ -9,8 +9,8 @@
   <accordion :one-at-atime=true :type="type">
     <panel v-for="panel in panels"
            v-bind:is-open="panel.isOpen">
-      <strong slot="header">{{ panel.header }}</strong>
-      {{ panel.body }}
+      <strong slot="header" v-text="panel.header"></strong>
+      <span v-text="panel.body"></span>
     </panel>
   </accordion>
 </div>

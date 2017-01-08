@@ -9,8 +9,8 @@
     <slider v-for="slide in slides">
       <img v-bind:src="slide.image"/>
       <div class="carousel-caption">
-        <h3>{{ slide.title }}</h3>
-        <p>{{ slide.caption }}</p>
+        <h3 v-text="slide.title"></h3>
+        <p v-text="slide.caption"></p>
       </div>
     </slider>
   </carousel>
