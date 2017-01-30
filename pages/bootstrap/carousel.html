@@ -4,14 +4,15 @@
 <script src="/js/vue-strap.js"></script>
 <!-- dependencies -->
 
-<div id="jId">
-  <carousel>
-    <slider v-for="slide in slides">
-      <img :src="slide.image"/>
-      <div class="carousel-caption">
-        <h3 v-text="slide.title"></h3>
-        <p v-text="slide.caption"></p>
-      </div>
+<div carousel id="jId">
+  <carousel :interval="interval" :indicators="indicators" :controls="controls">
+    <slider v-for="slide in computedSlides">
+      <a :href="slide.url" :target="slide.target">
+        <img :src="slide.image"/>
+        <div class="carousel-caption">
+          <div v-html="slide.rawHtml"></div>
+        </div>
+      </a>
     </slider>
   </carousel>
 </div>
@@ -20,23 +21,57 @@
   new Vue({
     el: '#jId',
     data: {
+      width: 1200,
+      height: 675,
+      crop: 'fill',
+      controls: true,
+      indicators: true,
+      interval: 5000,
       slides: [
         {
-          image: 'https://images.unsplash.com/uploads/1412026213666b9983de0/767f037f?dpr=1&auto=format&crop=entropy&fit=crop&w=1200&h=400&q=80&cs=tinysrgb',
-          caption: 'Horsing around',
-          title: 'A slide with a horse'
+          image: 'https://res.cloudinary.com/jframe/image/upload/v1481582979/pexels-photo-57851_bskgmu.jpg',
+          rawHtml: '<h3>Horsing around</h3><p>A slide with a horse</p>',
+          url: 'https://google.com',
+          newWindowOnClick: true
         },
         {
-          image: 'https://images.unsplash.com/photo-1472647077244-23bed45e50d9?dpr=1&auto=format&crop=north&fit=crop&w=1200&h=400&q=80&cs=tinysrgb',
-          caption: 'Better boater',
-          title: 'Reflecting on the water'
+          image: 'https://res.cloudinary.com/jframe/image/upload/v1481582238/pexels-photo-194098_mfrfkx.jpg',
+          rawHtml: '<h3>Better boater</h3><p>Reflecting on the water</p>',
+          url: 'https://google.com',
+          newWindowOnClick: true
         },
         {
-          image: 'https://images.unsplash.com/photo-1471110338536-858caa3dbe45?dpr=1&auto=format&crop=entropy&fit=crop&w=1200&h=400&q=80&cs=tinysrgb',
-          caption: 'Hot Diggity Dog',
-          title: 'Vendors'
+          image: 'https://res.cloudinary.com/jframe/image/upload/v1485815691/nhfkowawszulglvup0ms.jpg',
+          rawHtml: '<h3>Hot Diggity Dog</h3><p>Vendors</p>',
+          url: 'https://google.com',
+          newWindowOnClick: true
         }
       ]
+    },
+    methods: {
+      resizeCloudinaryImageTo: function (url, w, h, c) {
+        if (!!url && url.indexOf("image/upload") > -1) {
+          var regex = /\/v\d{8,12}\//g
+          var id = url.match(regex)[0]
+          var crop = c || 'pad'
+          return url.split(regex).join('/c_' + crop + ',w_' + w + ',h_' + h + id)
+        }
+        return url
+      }
+    },
+    computed: {
+      computedSlides: function () {
+        var slides = []
+        for (var i = 0; i < this.slides.length; i++) {
+          slides[i] = {
+            rawHtml: this.slides[i].rawHtml,
+            url: this.slides[i].url,
+            target: this.slides[i].newWindowOnClick ? '_blank' : '',
+          }
+          slides[i].image = this.resizeCloudinaryImageTo(this.slides[i].image, this.width, this.height, this.crop)
+        }
+        return slides
+      }
     },
     components: {
       carousel: VueStrap.carousel,
