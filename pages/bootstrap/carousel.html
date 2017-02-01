@@ -12,7 +12,7 @@
         <div class="carousel-caption">
           <div v-html="slide.rawHtml"></div>
         </div>
-        <a v-if="slide.url" :href="slide.url" :target="slide.target" style="position:absolute;top:0;right:0;bottom:0;left:0;"></a>
+        <a v-if="slide.url" :href="slide.url" :target="slide.target" style="position:absolute;top:0;right:0;bottom:0;left:0;z-index:11;"></a>
       </div>
     </slider>
   </carousel>
