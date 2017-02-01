@@ -5,14 +5,15 @@
 <!-- dependencies -->
 
 <div carousel id="jId">
-  <carousel :interval="interval" :indicators="indicators" :controls="controls">
-    <slider v-for="slide in computedSlides">
-      <a :href="slide.url" :target="slide.target">
+  <carousel :interval="guarded.interval" :indicators="!guarded.hideIndicators" :controls="!guarded.hideControls">
+    <slider v-for="slide in slidesGuarded">
+      <div style="position:relative;">
         <img :src="slide.image"/>
         <div class="carousel-caption">
           <div v-html="slide.rawHtml"></div>
         </div>
-      </a>
+        <a v-if="slide.url" :href="slide.url" :target="slide.target" style="position:absolute;top:0;right:0;bottom:0;left:0;"></a>
+      </div>
     </slider>
   </carousel>
 </div>
@@ -21,12 +22,12 @@
   new Vue({
     el: '#jId',
     data: {
-      width: 1200,
-      height: 675,
-      crop: 'fill',
-      controls: true,
-      indicators: true,
-      interval: 5000,
+      // width: 1200,
+      // height: 675,
+      // crop: 'fill',
+      // hideControls: true,
+      // hideIndicators: true,
+      speed: 2,
       slides: [
         {
           image: 'https://res.cloudinary.com/jframe/image/upload/v1481582979/pexels-photo-57851_bskgmu.jpg',
@@ -37,7 +38,7 @@
         {
           image: 'https://res.cloudinary.com/jframe/image/upload/v1481582238/pexels-photo-194098_mfrfkx.jpg',
           rawHtml: '<h3>Better boater</h3><p>Reflecting on the water</p>',
-          url: 'https://google.com',
+          // url: 'https://google.com',
           newWindowOnClick: true
         },
         {
@@ -60,7 +61,17 @@
       }
     },
     computed: {
-      computedSlides: function () {
+      guarded: function () {
+        return {
+          width: this.width || 1200,
+          height: this.height || 514,
+          crop: this.crop || 'fill',
+          hideControls: this.hideControls || false,
+          hideIndicators: this.hideIndicators || false,
+          interval: this.speed ? this.speed * 1000 : 5000,
+        }
+      },
+      slidesGuarded: function () {
         var slides = []
         for (var i = 0; i < this.slides.length; i++) {
           slides[i] = {
@@ -68,7 +79,7 @@
             url: this.slides[i].url,
             target: this.slides[i].newWindowOnClick ? '_blank' : '',
           }
-          slides[i].image = this.resizeCloudinaryImageTo(this.slides[i].image, this.width, this.height, this.crop)
+          slides[i].image = this.resizeCloudinaryImageTo(this.slides[i].image, this.guarded.width, this.guarded.height, this.guarded.crop)
         }
         return slides
       }
