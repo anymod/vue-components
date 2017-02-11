@@ -3,42 +3,51 @@
   <head>
     <meta charset="utf-8">
     <title>Standalone Vue Components</title>
+
+    <link rel="stylesheet" href="/normalize-css/normalize.css"/>
   </head>
   <body>
 
-    <!-- breadcrumb -->
-    <% if (!!data.folders) { %>
-      home
-    <% } else if (!!data.folder) { %>
-      <a href="/">home</a> /
-      <% if (!!data.path) { %>
-        <a href="/c/<%= data.folder %>"><%= data.folder %></a> / <%= data.component %>
-      <% } else { %>
-        <%= data.folder %>
+    <div style="padding: 10px 20px 5px">
+      <!-- breadcrumb -->
+      <% if (!!data.folders) { %>
+        home
+      <% } else if (!!data.folder) { %>
+        <a href="/">home</a> /
+        <% if (!!data.path) { %>
+          <a href="/c/<%= data.folder %>"><%= data.folder %></a> / <%= data.component %>
+        <% } else { %>
+          <%= data.folder %>
+        <% } %>
       <% } %>
-    <% } %>
+      <!-- /breadcrumb -->
+    </div>
+
     <hr>
-    <!-- /breadcrumb -->
 
-    <% if (!!data.folders) { %>
-      <ul>
-        <% for(var i = 0; i < data.folders.length; i++) { %>
-           <li><a href="/c/<%= data.folders[i] %>"><%= data.folders[i] %></a></li>
-        <% } %>
-      </ul>
-    <% } %>
+    <div style="padding: 5px 20px">
+      <% if (!!data.folders) { %>
+        <ul>
+          <% for(var i = 0; i < data.folders.length; i++) { %>
+             <li><a href="/c/<%= data.folders[i] %>"><%= data.folders[i] %></a></li>
+          <% } %>
+        </ul>
+      <% } %>
 
-    <% if (!!data.paths) { %>
-      <ul>
-        <% for(var i = 0; i < data.paths.length; i++) { %>
-           <li><a href="/c/<%= data.folder %>/<%= data.paths[i] %>"><%= data.paths[i] %></a></li>
-        <% } %>
-      </ul>
-    <% } %>
+      <% if (!!data.paths) { %>
+        <ul>
+          <% for(var i = 0; i < data.paths.length; i++) { %>
+             <li><a href="/c/<%= data.folder %>/<%= data.paths[i] %>"><%= data.paths[i] %></a></li>
+          <% } %>
+        </ul>
+      <% } %>
 
-    <% if (!!data.path) { %>
-      <%- include(data.path); %>
-    <% } %>
+      <% if (!!data.path) { %>
+        <%- include(data.path); %>
+      <% } %>
+
+    </div>
+
 
   </body>
 </html>

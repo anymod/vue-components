@@ -1,0 +1,38 @@
+<!-- dependencies -->
+<link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.css"/>
+<!-- <link rel="stylesheet" href="/css/basics/contact.css"/> -->
+<script src="/js/vue.js"></script>
+<!-- dependencies -->
+
+<form contact @submit="submit" class="form">
+  <div class="form-group">
+    <label>Name</label>
+    <input type="text" v-model="name" class="form-control" placeholder="Your Name"/>
+  </div>
+  <div class="form-group">
+    <label>Email</label>
+    <input type="email" v-model="email" class="form-control" placeholder="youremail@example.com"/>
+  </div>
+  <div class="form-group">
+    <label>Message</label>
+    <textarea v-model="message" class="form-control" placeholder="Your message"></textarea>
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+
+<script>
+  new Vue({
+    el: '[contact]',
+    data: {
+      name: '',
+      email: '',
+      message: ''
+    },
+    methods: {
+      submit: function (e) {
+        e.preventDefault()
+        console.log('submitted', this.name, this.email, this.message)
+      }
+    }
+  })
+</script>

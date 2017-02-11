@@ -3,11 +3,11 @@
 <script src="/js/vue.js"></script>
 <!-- dependencies -->
 
-<div text id="jId" v-text="text"></div>
+<div text v-text="text"></div>
 
 <script>
   new Vue({
-    el: '#jId',
+    el: '[text]',
     data: {
       text: 'Hello world'
     }

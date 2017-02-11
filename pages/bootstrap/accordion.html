@@ -5,7 +5,7 @@
 <script src="/js/vue-strap.js"></script>
 <!-- dependencies -->
 
-<div accordion id="jId">
+<div accordion>
   <accordion :one-at-atime=true :type="type">
     <panel v-for="panel in panels"
            :is-open="panel.isOpen">
@@ -17,7 +17,7 @@
 
 <script>
   new Vue({
-    el: '#jId',
+    el: '[accordion]',
     data: {
       type: 'info',
       panels: [

@@ -1,4 +1,4 @@
-#jId {
+[carousel] {
   display: inline-block;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -7,9 +7,9 @@
   color: #333;
   background-color: #fff;
 }
-#jId .carousel-inner > .item > a > img,
-#jId .carousel-inner > .item > img,
-#jId .img-responsive {
+[carousel] .carousel-inner > .item > a > img,
+[carousel] .carousel-inner > .item > img,
+[carousel] .img-responsive {
   margin: 0 auto;
   display: block;
   max-width: 100%;
@@ -20,7 +20,7 @@
   src: url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/fonts/glyphicons-halflings-regular.eot');
   src: url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/fonts/glyphicons-halflings-regular.woff') format('woff'), url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
-#jId .glyphicon {
+[carousel] .glyphicon {
   position: relative;
   top: 1px;
   display: inline-block;
@@ -31,39 +31,39 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-#jId .glyphicon-chevron-left:before {
+[carousel] .glyphicon-chevron-left:before {
   content: "\e079";
 }
-#jId .glyphicon-chevron-right:before {
+[carousel] .glyphicon-chevron-right:before {
   content: "\e080";
 }
-#jId * {
+[carousel] * {
   box-sizing: border-box;
 }
 @media screen and (min-width: 768px) {
-  #jId .carousel-indicators {
+  [carousel] .carousel-indicators {
     bottom: 20px;
   }
 }
-#jId ol,
-#jId ul {
+[carousel] ol,
+[carousel] ul {
   margin-top: 0;
   margin-bottom: 10px;
 }
-#jId a {
+[carousel] a {
   text-decoration: none;
 }
-#jId .carousel-inner > .active,
-#jId .carousel-inner > .next,
-#jId .carousel-inner > .prev {
+[carousel] .carousel-inner > .active,
+[carousel] .carousel-inner > .next,
+[carousel] .carousel-inner > .prev {
   display: block;
 }
-#jId :after,
-#jId :before {
+[carousel] :after,
+[carousel] :before {
   box-sizing: border-box;
 }
 @media not all, (-webkit-transform-3d) {
-  #jId .carousel-inner > .item {
+  [carousel] .carousel-inner > .item {
     -webkit-transition: -webkit-transform 0.6s ease-in-out;
     -o-transition: -o-transform 0.6s ease-in-out;
     transition: transform 0.6s ease-in-out;
@@ -73,27 +73,27 @@
     perspective: 1000px;
   }
 }
-#jId .carousel {
+[carousel] .carousel {
   position: relative;
 }
-#jId .carousel-inner {
+[carousel] .carousel-inner {
   position: relative;
   overflow: hidden;
   width: 100%;
 }
-#jId .carousel-inner > .item {
+[carousel] .carousel-inner > .item {
   display: none;
   position: relative;
   -webkit-transition: 0.6s ease-in-out left;
   -o-transition: 0.6s ease-in-out left;
   transition: 0.6s ease-in-out left;
 }
-#jId .carousel-inner > .item > img,
-#jId .carousel-inner > .item > a > img {
+[carousel] .carousel-inner > .item > img,
+[carousel] .carousel-inner > .item > a > img {
   line-height: 1;
 }
 @media all and (transform-3d), (-webkit-transform-3d) {
-  #jId .carousel-inner > .item {
+  [carousel] .carousel-inner > .item {
     -webkit-transition: -webkit-transform 0.6s ease-in-out;
     -moz-transition: -moz-transform 0.6s ease-in-out;
     -o-transition: -o-transform 0.6s ease-in-out;
@@ -105,57 +105,57 @@
     -moz-perspective: 1000px;
     perspective: 1000px;
   }
-  #jId .carousel-inner > .item.next,
-  #jId .carousel-inner > .item.active.right {
+  [carousel] .carousel-inner > .item.next,
+  [carousel] .carousel-inner > .item.active.right {
     -webkit-transform: translate3d(100%, 0, 0);
     transform: translate3d(100%, 0, 0);
     left: 0;
   }
-  #jId .carousel-inner > .item.prev,
-  #jId .carousel-inner > .item.active.left {
+  [carousel] .carousel-inner > .item.prev,
+  [carousel] .carousel-inner > .item.active.left {
     -webkit-transform: translate3d(-100%, 0, 0);
     transform: translate3d(-100%, 0, 0);
     left: 0;
   }
-  #jId .carousel-inner > .item.next.left,
-  #jId .carousel-inner > .item.prev.right,
-  #jId .carousel-inner > .item.active {
+  [carousel] .carousel-inner > .item.next.left,
+  [carousel] .carousel-inner > .item.prev.right,
+  [carousel] .carousel-inner > .item.active {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
     left: 0;
   }
 }
-#jId .carousel-inner > .active,
-#jId .carousel-inner > .next,
-#jId .carousel-inner > .prev {
+[carousel] .carousel-inner > .active,
+[carousel] .carousel-inner > .next,
+[carousel] .carousel-inner > .prev {
   display: block;
 }
-#jId .carousel-inner > .active {
+[carousel] .carousel-inner > .active {
   left: 0;
 }
-#jId .carousel-inner > .next,
-#jId .carousel-inner > .prev {
+[carousel] .carousel-inner > .next,
+[carousel] .carousel-inner > .prev {
   position: absolute;
   top: 0;
   width: 100%;
 }
-#jId .carousel-inner > .next {
+[carousel] .carousel-inner > .next {
   left: 100%;
 }
-#jId .carousel-inner > .prev {
+[carousel] .carousel-inner > .prev {
   left: -100%;
 }
-#jId .carousel-inner > .next.left,
-#jId .carousel-inner > .prev.right {
+[carousel] .carousel-inner > .next.left,
+[carousel] .carousel-inner > .prev.right {
   left: 0;
 }
-#jId .carousel-inner > .active.left {
+[carousel] .carousel-inner > .active.left {
   left: -100%;
 }
-#jId .carousel-inner > .active.right {
+[carousel] .carousel-inner > .active.right {
   left: 100%;
 }
-#jId .carousel-control {
+[carousel] .carousel-control {
   position: absolute;
   top: 0;
   left: 0;
@@ -169,14 +169,14 @@
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
   background-color: rgba(0, 0, 0, 0);
 }
-#jId .carousel-control.left {
+[carousel] .carousel-control.left {
   background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
   background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
 }
-#jId .carousel-control.right {
+[carousel] .carousel-control.right {
   left: auto;
   right: 0;
   background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
@@ -185,48 +185,48 @@
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
 }
-#jId .carousel-control:hover,
-#jId .carousel-control:focus {
+[carousel] .carousel-control:hover,
+[carousel] .carousel-control:focus {
   outline: 0;
   color: #fff;
   text-decoration: none;
   opacity: 0.9;
   filter: alpha(opacity=90);
 }
-#jId .carousel-control .icon-prev,
-#jId .carousel-control .icon-next,
-#jId .carousel-control .glyphicon-chevron-left,
-#jId .carousel-control .glyphicon-chevron-right {
+[carousel] .carousel-control .icon-prev,
+[carousel] .carousel-control .icon-next,
+[carousel] .carousel-control .glyphicon-chevron-left,
+[carousel] .carousel-control .glyphicon-chevron-right {
   position: absolute;
   top: 50%;
   margin-top: -10px;
   z-index: 5;
   display: inline-block;
 }
-#jId .carousel-control .icon-prev,
-#jId .carousel-control .glyphicon-chevron-left {
+[carousel] .carousel-control .icon-prev,
+[carousel] .carousel-control .glyphicon-chevron-left {
   left: 50%;
   margin-left: -10px;
 }
-#jId .carousel-control .icon-next,
-#jId .carousel-control .glyphicon-chevron-right {
+[carousel] .carousel-control .icon-next,
+[carousel] .carousel-control .glyphicon-chevron-right {
   right: 50%;
   margin-right: -10px;
 }
-#jId .carousel-control .icon-prev,
-#jId .carousel-control .icon-next {
+[carousel] .carousel-control .icon-prev,
+[carousel] .carousel-control .icon-next {
   width: 20px;
   height: 20px;
   line-height: 1;
   font-family: serif;
 }
-#jId .carousel-control .icon-prev:before {
+[carousel] .carousel-control .icon-prev:before {
   content: '\2039';
 }
-#jId .carousel-control .icon-next:before {
+[carousel] .carousel-control .icon-next:before {
   content: '\203a';
 }
-#jId .carousel-indicators {
+[carousel] .carousel-indicators {
   position: absolute;
   bottom: 10px;
   left: 50%;
@@ -237,7 +237,7 @@
   list-style: none;
   text-align: center;
 }
-#jId .carousel-indicators li {
+[carousel] .carousel-indicators li {
   display: inline-block;
   width: 10px;
   height: 10px;
@@ -249,13 +249,13 @@
   background-color: #000 \9;
   background-color: rgba(0, 0, 0, 0);
 }
-#jId .carousel-indicators .active {
+[carousel] .carousel-indicators .active {
   margin: 0;
   width: 12px;
   height: 12px;
   background-color: #fff;
 }
-#jId .carousel-caption {
+[carousel] .carousel-caption {
   position: absolute;
   left: 15%;
   right: 15%;
@@ -267,33 +267,33 @@
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
-#jId .carousel-caption .btn {
+[carousel] .carousel-caption .btn {
   text-shadow: none;
 }
 @media screen and (min-width: 768px) {
-  #jId .carousel-control .glyphicon-chevron-left,
-  #jId .carousel-control .glyphicon-chevron-right,
-  #jId .carousel-control .icon-prev,
-  #jId .carousel-control .icon-next {
+  [carousel] .carousel-control .glyphicon-chevron-left,
+  [carousel] .carousel-control .glyphicon-chevron-right,
+  [carousel] .carousel-control .icon-prev,
+  [carousel] .carousel-control .icon-next {
     width: 30px;
     height: 30px;
     margin-top: -10px;
     font-size: 30px;
   }
-  #jId .carousel-control .glyphicon-chevron-left,
-  #jId .carousel-control .icon-prev {
+  [carousel] .carousel-control .glyphicon-chevron-left,
+  [carousel] .carousel-control .icon-prev {
     margin-left: -10px;
   }
-  #jId .carousel-control .glyphicon-chevron-right,
-  #jId .carousel-control .icon-next {
+  [carousel] .carousel-control .glyphicon-chevron-right,
+  [carousel] .carousel-control .icon-next {
     margin-right: -10px;
   }
-  #jId .carousel-caption {
+  [carousel] .carousel-caption {
     left: 20%;
     right: 20%;
     padding-bottom: 30px;
   }
-  #jId .carousel-indicators {
+  [carousel] .carousel-indicators {
     bottom: 20px;
   }
 }

@@ -4,11 +4,11 @@
 <script src="/js/vue-strap.js"></script>
 <!-- dependencies -->
 
-<div carousel id="jId">
+<div carousel>
   <carousel :interval="guarded.interval" :indicators="!guarded.hideIndicators" :controls="!guarded.hideControls">
     <slider v-for="slide in slidesGuarded">
       <div style="position:relative;">
-        <img :src="slide.image"/>
+        <img :src="slide.image" class="image-responsive"/>
         <div class="carousel-caption">
           <div v-html="slide.rawHtml"></div>
         </div>
@@ -20,14 +20,14 @@
 
 <script>
   new Vue({
-    el: '#jId',
+    el: '[carousel]',
     data: {
-      // width: 1200,
-      // height: 675,
-      // crop: 'fill',
-      // hideControls: true,
-      // hideIndicators: true,
-      speed: 2,
+      width: 800,
+      height: 375,
+      crop: 'fill',
+      hideControls: false,
+      hideIndicators: false,
+      speed: 5,
       slides: [
         {
           image: 'https://res.cloudinary.com/jframe/image/upload/v1481582979/pexels-photo-57851_bskgmu.jpg',

@@ -4,7 +4,7 @@
 <script src="/js/vue-strap.js"></script>
 <!-- dependencies -->
 
-<div spinner id="jId">
+<div spinner>
   <spinner fixed global
     ref="spinner"
     v-model="spinner"
@@ -13,11 +13,11 @@
   </spinner>
 </div>
 
-<a href="#" onclick="spin(20000)">spin</a>
+<a href="#" onclick="spin(2000)">spin</a>
 
 <script>
   var obj = {
-    el: '#jId',
+    el: '[spinner]',
     data: {
       size: 'xl',
       text: 'loading',

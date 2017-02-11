@@ -1,7 +1,7 @@
 'use strict'
 
 process.env.NODE_ENV = 'development'
-process.env.PORT = 5555
+process.env.PORT = process.env.PORT || 3333
 
 let express     = require('express')
 ,   serveStatic = require('serve-static')

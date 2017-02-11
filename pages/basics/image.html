@@ -3,11 +3,11 @@
 <script src="/js/vue.js"></script>
 <!-- dependencies -->
 
-<div image id="jId"><img :src="src"/></div>
+<div image><img :src="src"/></div>
 
 <script>
   new Vue({
-    el: '#jId',
+    el: '[image]',
     data: {
       rawSrc: 'https://res.cloudinary.com/jframe/image/upload/v1481693531/library-image.jpg',
       crop: 'fill',
