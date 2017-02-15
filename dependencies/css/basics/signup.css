@@ -1,0 +1,1156 @@
+[signup] {
+  display: inline-block;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  min-width: 300px;
+}
+[signup] textarea {
+  min-height: 90px;
+}
+[signup] * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+[signup] *:before,
+[signup] *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+[signup] html {
+  font-size: 10px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+[signup] body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333333;
+  background-color: #fff;
+}
+[signup] input,
+[signup] button,
+[signup] select,
+[signup] textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+[signup] a {
+  color: #337ab7;
+  text-decoration: none;
+}
+[signup] a:hover,
+[signup] a:focus {
+  color: #23527c;
+  text-decoration: underline;
+}
+[signup] a:focus {
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+[signup] figure {
+  margin: 0;
+}
+[signup] img {
+  vertical-align: middle;
+}
+[signup] .img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+[signup] .img-rounded {
+  border-radius: 6px;
+}
+[signup] .img-thumbnail {
+  padding: 4px;
+  line-height: 1.42857143;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+[signup] .img-circle {
+  border-radius: 50%;
+}
+[signup] hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #eeeeee;
+}
+[signup] .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+[signup] .sr-only-focusable:active,
+[signup] .sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+}
+[signup] [role="button"] {
+  cursor: pointer;
+}
+[signup] .btn {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+[signup] .btn:focus,
+[signup] .btn:active:focus,
+[signup] .btn.active:focus,
+[signup] .btn.focus,
+[signup] .btn:active.focus,
+[signup] .btn.active.focus {
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+[signup] .btn:hover,
+[signup] .btn:focus,
+[signup] .btn.focus {
+  color: #333;
+  text-decoration: none;
+}
+[signup] .btn:active,
+[signup] .btn.active {
+  outline: 0;
+  background-image: none;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+[signup] .btn.disabled,
+[signup] .btn[disabled],
+fieldset[disabled] [signup] .btn {
+  cursor: not-allowed;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+a[signup] .btn.disabled,
+fieldset[disabled] a[signup] .btn {
+  pointer-events: none;
+}
+[signup] .btn-default {
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+}
+[signup] .btn-default:focus,
+[signup] .btn-default.focus {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #8c8c8c;
+}
+[signup] .btn-default:hover {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+[signup] .btn-default:active,
+[signup] .btn-default.active,
+.open > .dropdown-toggle[signup] .btn-default {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+[signup] .btn-default:active:hover,
+[signup] .btn-default.active:hover,
+.open > .dropdown-toggle[signup] .btn-default:hover,
+[signup] .btn-default:active:focus,
+[signup] .btn-default.active:focus,
+.open > .dropdown-toggle[signup] .btn-default:focus,
+[signup] .btn-default:active.focus,
+[signup] .btn-default.active.focus,
+.open > .dropdown-toggle[signup] .btn-default.focus {
+  color: #333;
+  background-color: #d4d4d4;
+  border-color: #8c8c8c;
+}
+[signup] .btn-default:active,
+[signup] .btn-default.active,
+.open > .dropdown-toggle[signup] .btn-default {
+  background-image: none;
+}
+[signup] .btn-default.disabled:hover,
+[signup] .btn-default[disabled]:hover,
+fieldset[disabled] [signup] .btn-default:hover,
+[signup] .btn-default.disabled:focus,
+[signup] .btn-default[disabled]:focus,
+fieldset[disabled] [signup] .btn-default:focus,
+[signup] .btn-default.disabled.focus,
+[signup] .btn-default[disabled].focus,
+fieldset[disabled] [signup] .btn-default.focus {
+  background-color: #fff;
+  border-color: #ccc;
+}
+[signup] .btn-default .badge {
+  color: #fff;
+  background-color: #333;
+}
+[signup] .btn-primary {
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+}
+[signup] .btn-primary:focus,
+[signup] .btn-primary.focus {
+  color: #fff;
+  background-color: #286090;
+  border-color: #122b40;
+}
+[signup] .btn-primary:hover {
+  color: #fff;
+  background-color: #286090;
+  border-color: #204d74;
+}
+[signup] .btn-primary:active,
+[signup] .btn-primary.active,
+.open > .dropdown-toggle[signup] .btn-primary {
+  color: #fff;
+  background-color: #286090;
+  border-color: #204d74;
+}
+[signup] .btn-primary:active:hover,
+[signup] .btn-primary.active:hover,
+.open > .dropdown-toggle[signup] .btn-primary:hover,
+[signup] .btn-primary:active:focus,
+[signup] .btn-primary.active:focus,
+.open > .dropdown-toggle[signup] .btn-primary:focus,
+[signup] .btn-primary:active.focus,
+[signup] .btn-primary.active.focus,
+.open > .dropdown-toggle[signup] .btn-primary.focus {
+  color: #fff;
+  background-color: #204d74;
+  border-color: #122b40;
+}
+[signup] .btn-primary:active,
+[signup] .btn-primary.active,
+.open > .dropdown-toggle[signup] .btn-primary {
+  background-image: none;
+}
+[signup] .btn-primary.disabled:hover,
+[signup] .btn-primary[disabled]:hover,
+fieldset[disabled] [signup] .btn-primary:hover,
+[signup] .btn-primary.disabled:focus,
+[signup] .btn-primary[disabled]:focus,
+fieldset[disabled] [signup] .btn-primary:focus,
+[signup] .btn-primary.disabled.focus,
+[signup] .btn-primary[disabled].focus,
+fieldset[disabled] [signup] .btn-primary.focus {
+  background-color: #337ab7;
+  border-color: #2e6da4;
+}
+[signup] .btn-primary .badge {
+  color: #337ab7;
+  background-color: #fff;
+}
+[signup] .btn-success {
+  color: #fff;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+}
+[signup] .btn-success:focus,
+[signup] .btn-success.focus {
+  color: #fff;
+  background-color: #449d44;
+  border-color: #255625;
+}
+[signup] .btn-success:hover {
+  color: #fff;
+  background-color: #449d44;
+  border-color: #398439;
+}
+[signup] .btn-success:active,
+[signup] .btn-success.active,
+.open > .dropdown-toggle[signup] .btn-success {
+  color: #fff;
+  background-color: #449d44;
+  border-color: #398439;
+}
+[signup] .btn-success:active:hover,
+[signup] .btn-success.active:hover,
+.open > .dropdown-toggle[signup] .btn-success:hover,
+[signup] .btn-success:active:focus,
+[signup] .btn-success.active:focus,
+.open > .dropdown-toggle[signup] .btn-success:focus,
+[signup] .btn-success:active.focus,
+[signup] .btn-success.active.focus,
+.open > .dropdown-toggle[signup] .btn-success.focus {
+  color: #fff;
+  background-color: #398439;
+  border-color: #255625;
+}
+[signup] .btn-success:active,
+[signup] .btn-success.active,
+.open > .dropdown-toggle[signup] .btn-success {
+  background-image: none;
+}
+[signup] .btn-success.disabled:hover,
+[signup] .btn-success[disabled]:hover,
+fieldset[disabled] [signup] .btn-success:hover,
+[signup] .btn-success.disabled:focus,
+[signup] .btn-success[disabled]:focus,
+fieldset[disabled] [signup] .btn-success:focus,
+[signup] .btn-success.disabled.focus,
+[signup] .btn-success[disabled].focus,
+fieldset[disabled] [signup] .btn-success.focus {
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+}
+[signup] .btn-success .badge {
+  color: #5cb85c;
+  background-color: #fff;
+}
+[signup] .btn-info {
+  color: #fff;
+  background-color: #5bc0de;
+  border-color: #46b8da;
+}
+[signup] .btn-info:focus,
+[signup] .btn-info.focus {
+  color: #fff;
+  background-color: #31b0d5;
+  border-color: #1b6d85;
+}
+[signup] .btn-info:hover {
+  color: #fff;
+  background-color: #31b0d5;
+  border-color: #269abc;
+}
+[signup] .btn-info:active,
+[signup] .btn-info.active,
+.open > .dropdown-toggle[signup] .btn-info {
+  color: #fff;
+  background-color: #31b0d5;
+  border-color: #269abc;
+}
+[signup] .btn-info:active:hover,
+[signup] .btn-info.active:hover,
+.open > .dropdown-toggle[signup] .btn-info:hover,
+[signup] .btn-info:active:focus,
+[signup] .btn-info.active:focus,
+.open > .dropdown-toggle[signup] .btn-info:focus,
+[signup] .btn-info:active.focus,
+[signup] .btn-info.active.focus,
+.open > .dropdown-toggle[signup] .btn-info.focus {
+  color: #fff;
+  background-color: #269abc;
+  border-color: #1b6d85;
+}
+[signup] .btn-info:active,
+[signup] .btn-info.active,
+.open > .dropdown-toggle[signup] .btn-info {
+  background-image: none;
+}
+[signup] .btn-info.disabled:hover,
+[signup] .btn-info[disabled]:hover,
+fieldset[disabled] [signup] .btn-info:hover,
+[signup] .btn-info.disabled:focus,
+[signup] .btn-info[disabled]:focus,
+fieldset[disabled] [signup] .btn-info:focus,
+[signup] .btn-info.disabled.focus,
+[signup] .btn-info[disabled].focus,
+fieldset[disabled] [signup] .btn-info.focus {
+  background-color: #5bc0de;
+  border-color: #46b8da;
+}
+[signup] .btn-info .badge {
+  color: #5bc0de;
+  background-color: #fff;
+}
+[signup] .btn-warning {
+  color: #fff;
+  background-color: #f0ad4e;
+  border-color: #eea236;
+}
+[signup] .btn-warning:focus,
+[signup] .btn-warning.focus {
+  color: #fff;
+  background-color: #ec971f;
+  border-color: #985f0d;
+}
+[signup] .btn-warning:hover {
+  color: #fff;
+  background-color: #ec971f;
+  border-color: #d58512;
+}
+[signup] .btn-warning:active,
+[signup] .btn-warning.active,
+.open > .dropdown-toggle[signup] .btn-warning {
+  color: #fff;
+  background-color: #ec971f;
+  border-color: #d58512;
+}
+[signup] .btn-warning:active:hover,
+[signup] .btn-warning.active:hover,
+.open > .dropdown-toggle[signup] .btn-warning:hover,
+[signup] .btn-warning:active:focus,
+[signup] .btn-warning.active:focus,
+.open > .dropdown-toggle[signup] .btn-warning:focus,
+[signup] .btn-warning:active.focus,
+[signup] .btn-warning.active.focus,
+.open > .dropdown-toggle[signup] .btn-warning.focus {
+  color: #fff;
+  background-color: #d58512;
+  border-color: #985f0d;
+}
+[signup] .btn-warning:active,
+[signup] .btn-warning.active,
+.open > .dropdown-toggle[signup] .btn-warning {
+  background-image: none;
+}
+[signup] .btn-warning.disabled:hover,
+[signup] .btn-warning[disabled]:hover,
+fieldset[disabled] [signup] .btn-warning:hover,
+[signup] .btn-warning.disabled:focus,
+[signup] .btn-warning[disabled]:focus,
+fieldset[disabled] [signup] .btn-warning:focus,
+[signup] .btn-warning.disabled.focus,
+[signup] .btn-warning[disabled].focus,
+fieldset[disabled] [signup] .btn-warning.focus {
+  background-color: #f0ad4e;
+  border-color: #eea236;
+}
+[signup] .btn-warning .badge {
+  color: #f0ad4e;
+  background-color: #fff;
+}
+[signup] .btn-danger {
+  color: #fff;
+  background-color: #d9534f;
+  border-color: #d43f3a;
+}
+[signup] .btn-danger:focus,
+[signup] .btn-danger.focus {
+  color: #fff;
+  background-color: #c9302c;
+  border-color: #761c19;
+}
+[signup] .btn-danger:hover {
+  color: #fff;
+  background-color: #c9302c;
+  border-color: #ac2925;
+}
+[signup] .btn-danger:active,
+[signup] .btn-danger.active,
+.open > .dropdown-toggle[signup] .btn-danger {
+  color: #fff;
+  background-color: #c9302c;
+  border-color: #ac2925;
+}
+[signup] .btn-danger:active:hover,
+[signup] .btn-danger.active:hover,
+.open > .dropdown-toggle[signup] .btn-danger:hover,
+[signup] .btn-danger:active:focus,
+[signup] .btn-danger.active:focus,
+.open > .dropdown-toggle[signup] .btn-danger:focus,
+[signup] .btn-danger:active.focus,
+[signup] .btn-danger.active.focus,
+.open > .dropdown-toggle[signup] .btn-danger.focus {
+  color: #fff;
+  background-color: #ac2925;
+  border-color: #761c19;
+}
+[signup] .btn-danger:active,
+[signup] .btn-danger.active,
+.open > .dropdown-toggle[signup] .btn-danger {
+  background-image: none;
+}
+[signup] .btn-danger.disabled:hover,
+[signup] .btn-danger[disabled]:hover,
+fieldset[disabled] [signup] .btn-danger:hover,
+[signup] .btn-danger.disabled:focus,
+[signup] .btn-danger[disabled]:focus,
+fieldset[disabled] [signup] .btn-danger:focus,
+[signup] .btn-danger.disabled.focus,
+[signup] .btn-danger[disabled].focus,
+fieldset[disabled] [signup] .btn-danger.focus {
+  background-color: #d9534f;
+  border-color: #d43f3a;
+}
+[signup] .btn-danger .badge {
+  color: #d9534f;
+  background-color: #fff;
+}
+[signup] .btn-link {
+  color: #337ab7;
+  font-weight: normal;
+  border-radius: 0;
+}
+[signup] .btn-link,
+[signup] .btn-link:active,
+[signup] .btn-link.active,
+[signup] .btn-link[disabled],
+fieldset[disabled] [signup] .btn-link {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+[signup] .btn-link,
+[signup] .btn-link:hover,
+[signup] .btn-link:focus,
+[signup] .btn-link:active {
+  border-color: transparent;
+}
+[signup] .btn-link:hover,
+[signup] .btn-link:focus {
+  color: #23527c;
+  text-decoration: underline;
+  background-color: transparent;
+}
+[signup] .btn-link[disabled]:hover,
+fieldset[disabled] [signup] .btn-link:hover,
+[signup] .btn-link[disabled]:focus,
+fieldset[disabled] [signup] .btn-link:focus {
+  color: #777777;
+  text-decoration: none;
+}
+[signup] .btn-lg {
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.3333333;
+  border-radius: 6px;
+}
+[signup] .btn-sm {
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+[signup] .btn-xs {
+  padding: 1px 5px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+[signup] .btn-block {
+  display: block;
+  width: 100%;
+}
+[signup] .btn-block + .btn-block {
+  margin-top: 5px;
+}
+[signup] input[type="submit"].btn-block,
+[signup] input[type="reset"].btn-block,
+[signup] input[type="button"].btn-block {
+  width: 100%;
+}
+[signup] .alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+[signup] .alert h4 {
+  margin-top: 0;
+  color: inherit;
+}
+[signup] .alert .alert-link {
+  font-weight: bold;
+}
+[signup] .alert > p,
+[signup] .alert > ul {
+  margin-bottom: 0;
+}
+[signup] .alert > p + p {
+  margin-top: 5px;
+}
+[signup] .alert-dismissable,
+[signup] .alert-dismissible {
+  padding-right: 35px;
+}
+[signup] .alert-dismissable .close,
+[signup] .alert-dismissible .close {
+  position: relative;
+  top: -2px;
+  right: -21px;
+  color: inherit;
+}
+[signup] .alert-success {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #3c763d;
+}
+[signup] .alert-success hr {
+  border-top-color: #c9e2b3;
+}
+[signup] .alert-success .alert-link {
+  color: #2b542c;
+}
+[signup] .alert-info {
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+  color: #31708f;
+}
+[signup] .alert-info hr {
+  border-top-color: #a6e1ec;
+}
+[signup] .alert-info .alert-link {
+  color: #245269;
+}
+[signup] .alert-warning {
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+  color: #8a6d3b;
+}
+[signup] .alert-warning hr {
+  border-top-color: #f7e1b5;
+}
+[signup] .alert-warning .alert-link {
+  color: #66512c;
+}
+[signup] .alert-danger {
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  color: #a94442;
+}
+[signup] .alert-danger hr {
+  border-top-color: #e4b9c0;
+}
+[signup] .alert-danger .alert-link {
+  color: #843534;
+}
+[signup] fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  min-width: 0;
+}
+[signup] legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 20px;
+  font-size: 21px;
+  line-height: inherit;
+  color: #333333;
+  border: 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+[signup] label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+[signup] input[type="search"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+[signup] input[type="radio"],
+[signup] input[type="checkbox"] {
+  margin: 4px 0 0;
+  margin-top: 1px \9;
+  line-height: normal;
+}
+[signup] input[type="file"] {
+  display: block;
+}
+[signup] input[type="range"] {
+  display: block;
+  width: 100%;
+}
+[signup] select[multiple],
+[signup] select[size] {
+  height: auto;
+}
+[signup] input[type="file"]:focus,
+[signup] input[type="radio"]:focus,
+[signup] input[type="checkbox"]:focus {
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+[signup] output {
+  display: block;
+  padding-top: 7px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555555;
+}
+[signup] .form-control {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+[signup] .form-control:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+[signup] .form-control::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+[signup] .form-control:-ms-input-placeholder {
+  color: #999;
+}
+[signup] .form-control::-webkit-input-placeholder {
+  color: #999;
+}
+[signup] .form-control::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+[signup] .form-control[disabled],
+[signup] .form-control[readonly],
+fieldset[disabled] [signup] .form-control {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+[signup] .form-control[disabled],
+fieldset[disabled] [signup] .form-control {
+  cursor: not-allowed;
+}
+textarea[signup] .form-control {
+  height: auto;
+}
+[signup] input[type="search"] {
+  -webkit-appearance: none;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  [signup] input[type="date"].form-control,
+  [signup] input[type="time"].form-control,
+  [signup] input[type="datetime-local"].form-control,
+  [signup] input[type="month"].form-control {
+    line-height: 34px;
+  }
+  [signup] input[type="date"].input-sm,
+  [signup] input[type="time"].input-sm,
+  [signup] input[type="datetime-local"].input-sm,
+  [signup] input[type="month"].input-sm,
+  .input-group-sm [signup] input[type="date"],
+  .input-group-sm [signup] input[type="time"],
+  .input-group-sm [signup] input[type="datetime-local"],
+  .input-group-sm [signup] input[type="month"] {
+    line-height: 30px;
+  }
+  [signup] input[type="date"].input-lg,
+  [signup] input[type="time"].input-lg,
+  [signup] input[type="datetime-local"].input-lg,
+  [signup] input[type="month"].input-lg,
+  .input-group-lg [signup] input[type="date"],
+  .input-group-lg [signup] input[type="time"],
+  .input-group-lg [signup] input[type="datetime-local"],
+  .input-group-lg [signup] input[type="month"] {
+    line-height: 46px;
+  }
+}
+[signup] .form-group {
+  margin-bottom: 15px;
+}
+[signup] .radio,
+[signup] .checkbox {
+  position: relative;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+[signup] .radio label,
+[signup] .checkbox label {
+  min-height: 20px;
+  padding-left: 20px;
+  margin-bottom: 0;
+  font-weight: normal;
+  cursor: pointer;
+}
+[signup] .radio input[type="radio"],
+[signup] .radio-inline input[type="radio"],
+[signup] .checkbox input[type="checkbox"],
+[signup] .checkbox-inline input[type="checkbox"] {
+  position: absolute;
+  margin-left: -20px;
+  margin-top: 4px \9;
+}
+[signup] .radio + .radio,
+[signup] .checkbox + .checkbox {
+  margin-top: -5px;
+}
+[signup] .radio-inline,
+[signup] .checkbox-inline {
+  position: relative;
+  display: inline-block;
+  padding-left: 20px;
+  margin-bottom: 0;
+  vertical-align: middle;
+  font-weight: normal;
+  cursor: pointer;
+}
+[signup] .radio-inline + .radio-inline,
+[signup] .checkbox-inline + .checkbox-inline {
+  margin-top: 0;
+  margin-left: 10px;
+}
+[signup] input[type="radio"][disabled],
+[signup] input[type="checkbox"][disabled],
+[signup] input[type="radio"].disabled,
+[signup] input[type="checkbox"].disabled,
+fieldset[disabled] [signup] input[type="radio"],
+fieldset[disabled] [signup] input[type="checkbox"] {
+  cursor: not-allowed;
+}
+[signup] .radio-inline.disabled,
+[signup] .checkbox-inline.disabled,
+fieldset[disabled] [signup] .radio-inline,
+fieldset[disabled] [signup] .checkbox-inline {
+  cursor: not-allowed;
+}
+[signup] .radio.disabled label,
+[signup] .checkbox.disabled label,
+fieldset[disabled] [signup] .radio label,
+fieldset[disabled] [signup] .checkbox label {
+  cursor: not-allowed;
+}
+[signup] .form-control-static {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  margin-bottom: 0;
+  min-height: 34px;
+}
+[signup] .form-control-static.input-lg,
+[signup] .form-control-static.input-sm {
+  padding-left: 0;
+  padding-right: 0;
+}
+[signup] .input-sm {
+  height: 30px;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+select[signup] .input-sm {
+  height: 30px;
+  line-height: 30px;
+}
+textarea[signup] .input-sm,
+select[multiple][signup] .input-sm {
+  height: auto;
+}
+[signup] .form-group-sm .form-control {
+  height: 30px;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+[signup] .form-group-sm select.form-control {
+  height: 30px;
+  line-height: 30px;
+}
+[signup] .form-group-sm textarea.form-control,
+[signup] .form-group-sm select[multiple].form-control {
+  height: auto;
+}
+[signup] .form-group-sm .form-control-static {
+  height: 30px;
+  min-height: 32px;
+  padding: 6px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+[signup] .input-lg {
+  height: 46px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.3333333;
+  border-radius: 6px;
+}
+select[signup] .input-lg {
+  height: 46px;
+  line-height: 46px;
+}
+textarea[signup] .input-lg,
+select[multiple][signup] .input-lg {
+  height: auto;
+}
+[signup] .form-group-lg .form-control {
+  height: 46px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.3333333;
+  border-radius: 6px;
+}
+[signup] .form-group-lg select.form-control {
+  height: 46px;
+  line-height: 46px;
+}
+[signup] .form-group-lg textarea.form-control,
+[signup] .form-group-lg select[multiple].form-control {
+  height: auto;
+}
+[signup] .form-group-lg .form-control-static {
+  height: 46px;
+  min-height: 38px;
+  padding: 11px 16px;
+  font-size: 18px;
+  line-height: 1.3333333;
+}
+[signup] .has-feedback {
+  position: relative;
+}
+[signup] .has-feedback .form-control {
+  padding-right: 42.5px;
+}
+[signup] .form-control-feedback {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  display: block;
+  width: 34px;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  pointer-events: none;
+}
+[signup] .input-lg + .form-control-feedback,
+[signup] .input-group-lg + .form-control-feedback,
+[signup] .form-group-lg .form-control + .form-control-feedback {
+  width: 46px;
+  height: 46px;
+  line-height: 46px;
+}
+[signup] .input-sm + .form-control-feedback,
+[signup] .input-group-sm + .form-control-feedback,
+[signup] .form-group-sm .form-control + .form-control-feedback {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+}
+[signup] .has-success .help-block,
+[signup] .has-success .control-label,
+[signup] .has-success .radio,
+[signup] .has-success .checkbox,
+[signup] .has-success .radio-inline,
+[signup] .has-success .checkbox-inline,
+[signup] .has-success.radio label,
+[signup] .has-success.checkbox label,
+[signup] .has-success.radio-inline label,
+[signup] .has-success.checkbox-inline label {
+  color: #3c763d;
+}
+[signup] .has-success .form-control {
+  border-color: #3c763d;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+[signup] .has-success .form-control:focus {
+  border-color: #2b542c;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
+}
+[signup] .has-success .input-group-addon {
+  color: #3c763d;
+  border-color: #3c763d;
+  background-color: #dff0d8;
+}
+[signup] .has-success .form-control-feedback {
+  color: #3c763d;
+}
+[signup] .has-warning .help-block,
+[signup] .has-warning .control-label,
+[signup] .has-warning .radio,
+[signup] .has-warning .checkbox,
+[signup] .has-warning .radio-inline,
+[signup] .has-warning .checkbox-inline,
+[signup] .has-warning.radio label,
+[signup] .has-warning.checkbox label,
+[signup] .has-warning.radio-inline label,
+[signup] .has-warning.checkbox-inline label {
+  color: #8a6d3b;
+}
+[signup] .has-warning .form-control {
+  border-color: #8a6d3b;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+[signup] .has-warning .form-control:focus {
+  border-color: #66512c;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
+}
+[signup] .has-warning .input-group-addon {
+  color: #8a6d3b;
+  border-color: #8a6d3b;
+  background-color: #fcf8e3;
+}
+[signup] .has-warning .form-control-feedback {
+  color: #8a6d3b;
+}
+[signup] .has-error .help-block,
+[signup] .has-error .control-label,
+[signup] .has-error .radio,
+[signup] .has-error .checkbox,
+[signup] .has-error .radio-inline,
+[signup] .has-error .checkbox-inline,
+[signup] .has-error.radio label,
+[signup] .has-error.checkbox label,
+[signup] .has-error.radio-inline label,
+[signup] .has-error.checkbox-inline label {
+  color: #a94442;
+}
+[signup] .has-error .form-control {
+  border-color: #a94442;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+[signup] .has-error .form-control:focus {
+  border-color: #843534;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
+}
+[signup] .has-error .input-group-addon {
+  color: #a94442;
+  border-color: #a94442;
+  background-color: #f2dede;
+}
+[signup] .has-error .form-control-feedback {
+  color: #a94442;
+}
+[signup] .has-feedback label ~ .form-control-feedback {
+  top: 25px;
+}
+[signup] .has-feedback label.sr-only ~ .form-control-feedback {
+  top: 0;
+}
+[signup] .help-block {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  color: #737373;
+}
+@media (min-width: 768px) {
+  [signup] .form-inline .form-group {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+  [signup] .form-inline .form-control {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+  }
+  [signup] .form-inline .form-control-static {
+    display: inline-block;
+  }
+  [signup] .form-inline .input-group {
+    display: inline-table;
+    vertical-align: middle;
+  }
+  [signup] .form-inline .input-group .input-group-addon,
+  [signup] .form-inline .input-group .input-group-btn,
+  [signup] .form-inline .input-group .form-control {
+    width: auto;
+  }
+  [signup] .form-inline .input-group > .form-control {
+    width: 100%;
+  }
+  [signup] .form-inline .control-label {
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+  [signup] .form-inline .radio,
+  [signup] .form-inline .checkbox {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+  [signup] .form-inline .radio label,
+  [signup] .form-inline .checkbox label {
+    padding-left: 0;
+  }
+  [signup] .form-inline .radio input[type="radio"],
+  [signup] .form-inline .checkbox input[type="checkbox"] {
+    position: relative;
+    margin-left: 0;
+  }
+  [signup] .form-inline .has-feedback .form-control-feedback {
+    top: 0;
+  }
+}
+[signup] .form-horizontal .radio,
+[signup] .form-horizontal .checkbox,
+[signup] .form-horizontal .radio-inline,
+[signup] .form-horizontal .checkbox-inline {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 7px;
+}
+[signup] .form-horizontal .radio,
+[signup] .form-horizontal .checkbox {
+  min-height: 27px;
+}
+[signup] .form-horizontal .form-group {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+@media (min-width: 768px) {
+  [signup] .form-horizontal .control-label {
+    text-align: right;
+    margin-bottom: 0;
+    padding-top: 7px;
+  }
+}
+[signup] .form-horizontal .has-feedback .form-control-feedback {
+  right: 15px;
+}
+@media (min-width: 768px) {
+  [signup] .form-horizontal .form-group-lg .control-label {
+    padding-top: 11px;
+    font-size: 18px;
+  }
+}
+@media (min-width: 768px) {
+  [signup] .form-horizontal .form-group-sm .control-label {
+    padding-top: 6px;
+    font-size: 12px;
+  }
+}
