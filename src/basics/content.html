@@ -1,0 +1,15 @@
+<!-- dependencies -->
+<link rel="stylesheet" href="/basics/content.css"/>
+<script src="/vendor/vue.js"></script>
+<!-- dependencies -->
+
+<div content v-html="rawHtml"></div>
+
+<script>
+  new Vue({
+    el: '[content]',
+    data: {
+      rawHtml: '<h1>Title</h1><p>Hello world</p>'
+    }
+  })
+</script>

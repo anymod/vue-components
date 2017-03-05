@@ -1,0 +1,15 @@
+<!-- dependencies -->
+<link rel="stylesheet" href="/basics/text.css"/>
+<script src="/vendor/vue.js"></script>
+<!-- dependencies -->
+
+<div text v-text="text"></div>
+
+<script>
+  new Vue({
+    el: '[text]',
+    data: {
+      text: 'Hello world'
+    }
+  })
+</script>

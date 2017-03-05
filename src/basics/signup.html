@@ -1,23 +1,15 @@
 <!-- dependencies -->
 <!-- <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.css"/> -->
-<link rel="stylesheet" href="/css/basics/contact.css"/>
-<script src="/js/axios.js"></script>
-<script src="/js/vue.js"></script>
+<link rel="stylesheet" href="/basics/signup.css"/>
+<script src="/vendor/axios.js"></script>
+<script src="/vendor/vue.js"></script>
 <!-- dependencies -->
 
-<div contact>
+<div signup>
   <form @submit="submit" class="form" v-if="!success">
-    <div class="form-group">
-      <label>Name</label>
-      <input type="text" v-model="name" class="form-control" placeholder="Your Name"/>
-    </div>
     <div class="form-group">
       <label>Email</label>
       <input type="email" v-model="email" class="form-control" placeholder="youremail@example.com"/>
-    </div>
-    <div class="form-group">
-      <label>Message</label>
-      <textarea v-model="message" class="form-control" placeholder="Hello, world"></textarea>
     </div>
     <div class="alert alert-warning" v-if="alert" v-text="alert"></div>
     <button type="submit" class="btn btn-default">Submit</button>
@@ -27,11 +19,9 @@
 
 <script>
   new Vue({
-    el: '[contact]',
+    el: '[signup]',
     data: {
-      name: '',
       email: '',
-      message: '',
       alert: '',
       success: false
     },
@@ -40,14 +30,12 @@
         e.preventDefault()
         var that = this
         this.alert = ''
-        if (!this.message) return this.alert = "Please add your message"
+        if (!this.email) return this.alert = "Please add your email"
         axios.post('http://localhost:5000/v0/posts', {
           project: '89E49E',
           instance: 1,
           data: {
-            name: this.name,
-            email: this.email,
-            message: this.message
+            email: this.email
           }
         })
         .then(function (response) {

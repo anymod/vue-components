@@ -1,0 +1,38 @@
+<!-- dependencies -->
+<link rel="stylesheet" href="/bootstrap/alert.css"/>
+<!-- <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.css"/> -->
+<script src="/vendor/vue.js"></script>
+<script src="/vendor/vue-strap.js"></script>
+<!-- dependencies -->
+
+<div alert>
+  <alert :placement="placement" :duration="duration" :type="type" :width="width" dismissable>
+    <strong v-text="heading"></strong>
+    <p v-text="message"></p>
+  </alert>
+</div>
+
+<a href="#" onclick="showAlert()">alert</a>
+
+<script>
+  var obj = {
+    el: '[alert]',
+    data: {
+      showRight: true,
+      placement: 'top',
+      type: 'success',
+      duration: 0,
+      width: '400px',
+      heading: 'Well done!',
+      message: 'You successfully read this important alert message.'
+    },
+    components: {
+      alert: VueStrap.alert
+    }
+  }
+  new Vue(obj)
+
+  function showAlert () {
+    console.log('show')
+  }
+</script>

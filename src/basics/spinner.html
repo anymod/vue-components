@@ -1,0 +1,36 @@
+<!-- dependencies -->
+<link rel="stylesheet" href="/basics/spinner.css"/>
+<script src="/vendor/vue.js"></script>
+<script src="/vendor/vue-strap.js"></script>
+<!-- dependencies -->
+
+<div spinner>
+  <spinner fixed global
+    ref="spinner"
+    v-model="spinner"
+    :size="size"
+    :text="text">
+  </spinner>
+</div>
+
+<a href="#" onclick="spin(2000)">spin</a>
+
+<script>
+  var obj = {
+    el: '[spinner]',
+    data: {
+      size: 'xl',
+      text: 'loading',
+      spinner: false
+    },
+    components: {
+      spinner: VueStrap.spinner
+    }
+  }
+  new Vue(obj)
+
+  function spin (time) {
+    obj.data.spinner = true
+    setTimeout(function() { obj.data.spinner = false }, time)
+  }
+</script>

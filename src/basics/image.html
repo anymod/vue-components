@@ -1,0 +1,27 @@
+<!-- dependencies -->
+<link rel="stylesheet" href="/basics/text.css"/>
+<script src="/vendor/vue.js"></script>
+<!-- dependencies -->
+
+<div image><img :src="src"/></div>
+
+<script>
+  new Vue({
+    el: '[image]',
+    data: {
+      rawSrc: 'https://res.cloudinary.com/component/image/upload/v1481693531/library-image.jpg',
+      crop: 'fill',
+      height: 200,
+      width: 600
+    },
+    computed: {
+      src: function () {
+        var slug = []
+        if (this.crop) slug.push('c_' + this.crop)
+        if (this.height) slug.push('h_' + this.height)
+        if (this.width) slug.push('w_' + this.width)
+        return this.rawSrc.replace(/\/upload\//, '/upload/' + slug.join(',') + '/')
+      }
+    }
+  })
+</script>

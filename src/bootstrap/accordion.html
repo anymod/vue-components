@@ -1,0 +1,44 @@
+<!-- dependencies -->
+<!-- <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.css"/> -->
+<link rel="stylesheet" href="/bootstrap/accordion.css"/>
+<script src="/vendor/vue.js"></script>
+<script src="/vendor/vue-strap.js"></script>
+<!-- dependencies -->
+
+<div accordion>
+  <accordion :one-at-atime=true :type="type">
+    <panel v-for="panel in panels"
+           :is-open="panel.isOpen">
+      <strong slot="header" v-text="panel.header"></strong>
+      <span v-text="panel.body"></span>
+    </panel>
+  </accordion>
+</div>
+
+<script>
+  new Vue({
+    el: '[accordion]',
+    data: {
+      type: 'info',
+      panels: [
+        {
+          header: 'Introduction',
+          body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tristique pharetra elit sed pellentesque. Phasellus ultricies turpis eu mattis porttitor. Curabitur vel dignissim nibh. Cras ultricies a risus non fermentum. In consectetur diam tellus, in auctor arcu porttitor et. Nam eu elementum nisi. Nullam a dui consequat, auctor justo sit amet, congue eros. Nunc tortor nibh, condimentum vel ipsum ac, malesuada mollis dui. Donec commodo maximus dignissim. Cras interdum maximus dictum.',
+          isOpen: true
+        },
+        {
+          header: 'Up and running',
+          body: 'Integer porttitor, sapien quis dignissim tristique, elit leo dictum tortor, at aliquam sapien odio eget urna. Sed mollis orci vel leo commodo, vel pellentesque massa lobortis. Nunc tristique blandit tempus. Etiam vel tortor aliquet, dictum ligula quis, aliquam ante. Vestibulum eu lorem mollis, porttitor dui quis, varius est. Vestibulum eleifend ex ac sagittis porta. Donec eleifend turpis eros, vel lacinia nulla mollis ut. Donec pharetra neque enim, eu cursus nunc porttitor sed. Vestibulum vehicula purus velit, eu commodo mi rutrum quis. Quisque tincidunt mi pharetra diam viverra, vitae ullamcorper elit luctus. Aliquam eget sodales dui, eget dictum ante. Proin finibus eget dolor non venenatis.'
+        },
+        {
+          header: 'Profit',
+          body: 'Curabitur sit amet dapibus dolor. Praesent eros lorem, consequat et hendrerit vel, posuere at nibh. Nullam id rhoncus lorem. Nullam nec fermentum neque. Vivamus non dui sed enim tristique scelerisque vitae molestie nulla. Pellentesque at sem hendrerit, posuere justo nec, iaculis ante. Sed sapien turpis, viverra finibus tempor ac, porta vitae ex. Vestibulum vitae fringilla lacus. Mauris gravida arcu scelerisque pharetra eleifend.'
+        }
+      ]
+    },
+    components: {
+      accordion: VueStrap.accordion,
+      panel: VueStrap.panel
+    }
+  })
+</script>

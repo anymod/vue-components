@@ -13,7 +13,7 @@
       <% } else if (!!data.folder) { %>
         <a href="/">home</a> /
         <% if (!!data.path) { %>
-          <a href="/c/<%= data.folder %>"><%= data.folder %></a> / <%= data.component %>
+          <a href="/dist/<%= data.folder %>"><%= data.folder %></a> / <%= data.component %>
         <% } else { %>
           <%= data.folder %>
         <% } %>
@@ -27,7 +27,7 @@
       <% if (!!data.folders) { %>
         <ul>
           <% for(var i = 0; i < data.folders.length; i++) { %>
-             <li><a href="/c/<%= data.folders[i] %>"><%= data.folders[i] %></a></li>
+             <li><a href="/dist/<%= data.folders[i] %>"><%= data.folders[i] %></a></li>
           <% } %>
         </ul>
       <% } %>
@@ -35,7 +35,7 @@
       <% if (!!data.paths) { %>
         <ul>
           <% for(var i = 0; i < data.paths.length; i++) { %>
-             <li><a href="/c/<%= data.folder %>/<%= data.paths[i] %>"><%= data.paths[i] %></a></li>
+             <li><a href="/dist/<%= data.folder %>/<%= data.paths[i] %>"><%= data.paths[i] %></a></li>
           <% } %>
         </ul>
       <% } %>

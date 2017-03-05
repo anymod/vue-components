@@ -1,0 +1,92 @@
+<!-- dependencies -->
+<link rel="stylesheet" href="/bootstrap/carousel.css"/>
+<script src="/vendor/vue.js"></script>
+<script src="/vendor/vue-strap.js"></script>
+<!-- dependencies -->
+
+<div carousel>
+  <carousel :interval="guarded.interval" :indicators="!guarded.hideIndicators" :controls="!guarded.hideControls">
+    <slider v-for="slide in slidesGuarded">
+      <div style="position:relative;">
+        <img :src="slide.image" class="image-responsive"/>
+        <div class="carousel-caption">
+          <div v-html="slide.rawHtml"></div>
+        </div>
+        <a v-if="slide.url" :href="slide.url" :target="slide.target" style="position:absolute;top:0;right:0;bottom:0;left:0;z-index:11;"></a>
+      </div>
+    </slider>
+  </carousel>
+</div>
+
+<script>
+  new Vue({
+    el: '[carousel]',
+    data: {
+      width: 800,
+      height: 375,
+      crop: 'fill',
+      hideControls: false,
+      hideIndicators: false,
+      speed: 5,
+      slides: [
+        {
+          image: 'https://res.cloudinary.com/component/image/upload/v1481582979/pexels-photo-57851_bskgmu.jpg',
+          rawHtml: '<h3>Horsing around</h3><p>A slide with a horse</p>',
+          url: 'https://google.com',
+          newWindowOnClick: true
+        },
+        {
+          image: 'https://res.cloudinary.com/component/image/upload/v1481582238/pexels-photo-194098_mfrfkx.jpg',
+          rawHtml: '<h3>Better boater</h3><p>Reflecting on the water</p>',
+          // url: 'https://google.com',
+          newWindowOnClick: true
+        },
+        {
+          image: 'https://res.cloudinary.com/component/image/upload/v1485815691/nhfkowawszulglvup0ms.jpg',
+          rawHtml: '<h3>Hot Diggity Dog</h3><p>Vendors</p>',
+          url: 'https://google.com',
+          newWindowOnClick: true
+        }
+      ]
+    },
+    methods: {
+      resizeCloudinaryImageTo: function (url, w, h, c) {
+        if (!!url && url.indexOf("image/upload") > -1) {
+          var regex = /\/v\d{8,12}\//g
+          var id = url.match(regex)[0]
+          var crop = c || 'pad'
+          return url.split(regex).join('/c_' + crop + ',w_' + w + ',h_' + h + id)
+        }
+        return url
+      }
+    },
+    computed: {
+      guarded: function () {
+        return {
+          width: this.width || 1200,
+          height: this.height || 514,
+          crop: this.crop || 'fill',
+          hideControls: this.hideControls || false,
+          hideIndicators: this.hideIndicators || false,
+          interval: this.speed ? this.speed * 1000 : 5000,
+        }
+      },
+      slidesGuarded: function () {
+        var slides = []
+        for (var i = 0; i < this.slides.length; i++) {
+          slides[i] = {
+            rawHtml: this.slides[i].rawHtml,
+            url: this.slides[i].url,
+            target: this.slides[i].newWindowOnClick ? '_blank' : '',
+          }
+          slides[i].image = this.resizeCloudinaryImageTo(this.slides[i].image, this.guarded.width, this.guarded.height, this.guarded.crop)
+        }
+        return slides
+      }
+    },
+    components: {
+      carousel: VueStrap.carousel,
+      slider: VueStrap.slider
+    }
+  })
+</script>
