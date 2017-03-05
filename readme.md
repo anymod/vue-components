@@ -2,7 +2,7 @@
 
 The goal of this project is to build a vast library of completely standalone components using Vue.js.
 
-### [See live components](https://vue-components.herokuapp.com/)
+### [Component demo](https://vue-components.herokuapp.com/)
 
 Each component should have its own HTML and CSS fully isolated, with JavaScript dependency only on Vue.js or relevant external library (like Axios).
 
@@ -31,7 +31,7 @@ We can build more together.
 
 ## Stay In Touch
 
-For latest releases and announcements, follow on Twitter: [@component-io](https://twitter.com/component_io)
+For latest releases and announcements, follow on Twitter: [@component_io](https://twitter.com/component_io)
 
 ## License
 
