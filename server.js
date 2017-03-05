@@ -15,7 +15,7 @@ app.use(compression())
 app.get('/', (req, res, next) => {
   fs.readdir('./src', (err, files) => {
     var data = { folders: [] }
-    files.map(file => { if (file.indexOf('.') < 0) data.folders.push(file) })
+    files.map(file => { if (!file.match(/\.|vendor/g)) data.folders.push(file) })
     res.render(path.join(__dirname, 'index.ejs'), { data: data })
   })
 })
