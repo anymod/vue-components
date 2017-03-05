@@ -2,6 +2,8 @@
 
 The goal of this project is to build a vast library of completely standalone components using Vue.js.
 
+### [See live components](https://vue-components.herokuapp.com/)
+
 Each component should have its own HTML and CSS fully isolated, with JavaScript dependency only on Vue.js or relevant external library (like Axios).
 
 Because Vue.js is compatible down to IE9, our goal is for most or all of these components to also be compatible down to IE9.

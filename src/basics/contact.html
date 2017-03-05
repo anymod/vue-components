@@ -42,8 +42,6 @@
         this.alert = ''
         if (!this.message) return this.alert = "Please add your message"
         axios.post('http://localhost:5000/v0/posts', {
-          project: '89E49E',
-          instance: 1,
           data: {
             name: this.name,
             email: this.email,
