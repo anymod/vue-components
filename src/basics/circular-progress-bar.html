@@ -1,0 +1,97 @@
+<!-- dependencies -->
+<link rel="stylesheet" href="/basics/circular-progress-bar.css"/>
+<script src="/vendor/vue.js"></script>
+<!-- dependencies -->
+
+<div circular-progress-bar :style="{ backgroundColor: guarded.background, width: guarded.size+'px', height: `${guarded.size}px` }">
+    <div class="circular-progress-bar-wrapper">
+        <div class="circular-progress-bar-bar" v-for="bar in guardedItems">
+            <div class="circular-progress-bar-clip" :style="{ transitionDuration: transitionDuration, transform: getRotate(bar.offset + 0.3) }">
+                <div class="circular-progress-bar-part" :style="{ transitionDuration: transitionDuration, backgroundColor: bar.color, transform: getPartRotate(bar.degree) }"></div>
+            </div>
+            <div class="circular-progress-bar-clip" :style="{ transitionDuration: transitionDuration, transform: getRotate(bar.offset + (bar.degree / 2)) }">
+                <div class="circular-progress-bar-part" :style="{ transitionDuration: transitionDuration, backgroundColor: bar.color, transform: getPartRotate(bar.degree) }"></div>
+            </div>
+        </div>
+    </div>
+    <div class="circular-progress-bar-value" v-if="guarded.showValue" :style="{ backgroundColor: guarded.valueBackground, top: valueNodePosition, left: valueNodePosition, width: valueNodeSize, height: valueNodeSize, lineHeight: valueNodeSize }">
+        <div class="circular-progress-bar-text" v-text="displayed" :style="{ fontSize: valueTextFontSize }"></div>
+    </div>
+</div>
+
+
+<script>
+    // Adapted from https://github.com/GMartigny/circular-progress-bar
+    new Vue({
+        el: '[circular-progress-bar]',
+        data: {
+            defaultColors: ['#0095ff', '#ffa114', '#4714ff', '#ff14c8', '#c8ff14', '#204dff', '#ff203a', '#3aff20'],
+            displayed: ''
+        },
+        computed: {
+            guarded: function() {
+                return {
+                    size: this.size || 150,
+                    barsWidth: this.barsWidth || 10,
+                    max: this.max || 100,
+                    showValue: this.showValue || true,
+                    valueDecimals: this.valueDecimals === null ? 0 : this.valueDecimals,
+                    valueUnit: this.valueUnit === null ? '%' : this.valueUnit,
+                    valueBackground: this.valueBackground || '#333',
+                    background: this.background || 'rgba(0, 0, 0, .3)',
+                    transitionTime: this.transitionTime || 500,
+                    valueWhenDone: this.valueWhenDone,
+                };
+            },
+            guardedItems: function() {
+                const items = [];
+                let offset = 0;
+                this.items.forEach(function(it, index) {
+                    if (it.value !== undefined) {
+                        const degree = this.toDegree((Math.min(it.value, this.guarded.max) / this.guarded.max) * 100);
+                        items.push({
+                            value: it.value,
+                            color: it.color || this.getLooped(this.colors, index),
+                            degree,
+                            offset,
+                        });
+                        offset += degree;
+                    }
+                }, this);
+                return items;
+            },
+            valueNodePosition: function() { return this.guarded.barsWidth + 'px'; },
+            valueNodeSize: function() { return (this.guarded.size - (this.guarded.barsWidth * 2)) + 'px'; },
+            valueTextFontSize: function() { return (this.guarded.size / 5) + 'px'; },
+            barsSum: function() {
+                return this.guardedItems.reduce(function(acc, bar){
+                    return acc + bar.value;
+                }, 0);
+            },
+            value: function() {
+                const value = Math.min(this.barsSum, this.guarded.max);
+                const displayed = this.guarded.valueUnit === '%' ? (value / this.guarded.max) * 100 : value;
+                this.displayed = displayed.toFixed(this.guarded.valueDecimals) + this.guarded.valueUnit;
+                return value;
+            },
+            transitionDuration: function() { return this.guarded.transitionTime + 'ms'; },
+        },
+        watch: {
+            value: function(val) {
+                if (val === this.guarded.max && this.guarded.valueWhenDone !== null) {
+                    setTimeout(function() {
+                        this.displayed = this.guarded.valueWhenDone;
+                    }.bind(this), this.guarded.transitionTime);
+                }
+            },
+        },
+        methods: {
+            toDegree: function(percent) { return percent * (360 / 100); },
+            getLooped: function(array, index) { return array[index % array.length]; },
+            getPartRotate: function(degree) {
+                return this.getRotate((degree / 2) - 180);
+            },
+            getRotate: function(degree) { return 'rotate3d(0,0,1,' + degree + 'deg)'; },
+        },
+    })
+</script>
