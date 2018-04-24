@@ -31,10 +31,10 @@ We can build more together.
 
 ## Stay In Touch
 
-For latest releases and announcements, follow on Twitter: [@component_io](https://twitter.com/component_io)
+For latest releases and announcements, follow on Twitter: [@anymod_team](https://twitter.com/anymod_team)
 
 ## License
 
 [MIT](https://opensource.org/licenses/MIT)
 
-Copyright (c) 2016-present, Component IO
+Copyright (c) 2016-present, Anymod
